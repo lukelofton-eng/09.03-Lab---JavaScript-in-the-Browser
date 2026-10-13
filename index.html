@@ -1,25 +1,85 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>CS208 - Starter Code (UPDATE ME)!</title>
-  <meta name="description" content="">
+  <title>CS208 - Starting Lineup Form</title>
+  <meta name="description" content="Starting Lineup Form">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>HTML Rocks!!</h1>
-  <ul>
-  <li><a href="/hello">Click here to say hello</a></li>
-  <li><button id="hello-link">Click Me!</button></li>
-  <li><button id="joke-button">Dad Joke!</button></li>
-  <script src="script.js"></script>
-  </ul>
-  <img src="funny.png" alt="Funny Image" width="300" height="200">
+  <h1>Starting Lineup</h1>
 
-  <h2 id="joke-display"></h2>
+  <form id="lineup-form">
+    <!-- Status Fieldset -->
+    <p>
+      <fieldset>
+        <legend>Status</legend>
+        <label>
+          <input type="radio" name="status" value="Draft"> Draft
+        </label>
+        <label>
+          <input type="radio" name="status" value="Final" checked> Final
+        </label>
+      </fieldset>
+    </p>
+
+    <!-- Date Drop-down -->
+    <p>
+      <label for="gameDate">Date: </label>
+      <select id="gameDate" name="gameDate">
+        <option value="March 20">March 20</option>
+        <option value="March 24">March 24</option>
+        <option value="April 2">April 2</option>
+        <option value="April 6">April 6</option>
+        <option value="April 13">April 13</option>
+      </select>
+    </p>
+
+    <!-- Players Fieldset -->
+    <p>
+      <fieldset>
+        <legend>Players</legend>
+        <p>
+          <label>
+            <input type="checkbox" name="players" value="Aarav Agarwal"> Aarav Agarwal
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="players" value="Ava Johnson"> Ava Johnson
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="players" value="Julio Ortiz"> Julio Ortiz
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="players" value="Liam Rubio"> Liam Rubio
+          </label>
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="players" value="Emma Witherspoon"> Emma Witherspoon
+          </label>
+        </p>
+      </fieldset>
+    </p>
+
+    <!-- Submit Button -->
+    <p>
+      <input type="submit" id="submit-btn" value="Submit">
+    </p>
+  </form>
+
+  <!-- Container for displaying user selections -->
+  <div id="output-display"></div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
